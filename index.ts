@@ -4,6 +4,7 @@ import './style.css';
 withFunc();
 sortFunc();
 reverseFunc();
+spliceFunc();
 
 // Write TypeScript code!
 function withFunc() {
@@ -21,12 +22,13 @@ function sortFunc() {
 
   //before
   const peopleSortedBefore = ['Sally', 'Kyle', 'John'];
-  const newPeopleSortedBefore = [...peopleSorted].sort();
+  const newPeopleSortedBefore = [...peopleSortedBefore].sort();
 
   console.log({ peopleSortedBefore }, { newPeopleSortedBefore });
 
+   //after
   const peopleToSortedAfter = ['Sally', 'Kyle', 'John'];
-  const newPeopleToSortedAfter = peopleSorted.toSorted();
+  const newPeopleToSortedAfter = peopleToSortedAfter.toSorted();
 
   console.log({ peopleToSortedAfter }, { newPeopleToSortedAfter });
 }
@@ -39,12 +41,32 @@ function reverseFunc() {
 
   //before
   const peopleReversedBefore = ['Sally', 'Kyle', 'John'];
-  const newPeopleReversedBefore = [...peopleReversed].reverse();
+  const newPeopleReversedBefore = [...peopleReversedBefore].reverse();
 
   console.log({ peopleReversedBefore }, { newPeopleReversedBefore });
 
+  //after
   const peopleToReversedAfter = ['Sally', 'Kyle', 'John'];
-  const newPeopleToReversedAfter = peopleReversed.toReversed();
+  const newPeopleToReversedAfter = peopleToReversedAfter.toReversed();
 
   console.log({ peopleToReversedAfter }, { newPeopleToReversedAfter });
+}
+
+function spliceFunc() {
+  const peopleSpliced = ['Sally', 'Kyle', 'John'];
+  const newPeopleSpliced = peopleSpliced.splice(0, 2, 'New');
+
+  console.log({ peopleSpliced }, { newPeopleSpliced });
+
+  //before
+  const peopleSplicedBefore = ['Sally', 'Kyle', 'John'];
+  const newPeopleSplicedBefore = [...peopleSplicedBefore].splice(0, 2, 'New');
+
+  console.log({ peopleSplicedBefore }, { newPeopleSplicedBefore });
+
+   //after
+  const peopleToSplicedAfter = ['Sally', 'Kyle', 'John'];
+  const newPeopleToSplicedAfter = peopleToSplicedAfter.toSpliced(0, 2, 'New');
+
+  console.log({ peopleToSplicedAfter }, { newPeopleToSplicedAfter });
 }
