@@ -2,7 +2,7 @@
 import './style.css';
 
 withFunc();
-sortFunc()
+sortFunc();
 
 // Write TypeScript code!
 function withFunc() {
